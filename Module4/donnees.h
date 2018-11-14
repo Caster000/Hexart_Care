@@ -4,9 +4,14 @@
 
 #ifndef MODULE4_DONNEES_H
 #define MODULE4_DONNEES_H
-typedef struct donnees Donnees;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct donnees Donnees;                 //definition de notre strucuture de donnees
 struct donnees{
     int milli;
     int pouls;
 };
-#endif //MODULE4_DONNEES_H
+void ecritureCSV(FILE *fichier,unsigned int nb_line, Donnees *tab);
+#endif
