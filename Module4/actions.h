@@ -4,21 +4,25 @@
 
 #ifndef MODULE4_ACTIONS_H
 #define MODULE4_ACTIONS_H
-donneesBrut()
+donneesBrut();
 
-ordreCroissant()
+ordreCroissantTemps();
 
-ordreDecroissant()
+ordreCroissantPouls();
 
-rechercheFrequence()
+ordreDecroissantTemps();
 
-moyenne()
+ordreDecroissantPouls();
 
-nombreLigne()
+rechercheFrequence();
 
-max()
+moyenne();
 
-mini()
+nombreLigne();
+
+max();
+
+mini();
 
 
 
