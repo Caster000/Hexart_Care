@@ -4,5 +4,10 @@
 
 #ifndef MODULE4_MENU_H
 #define MODULE4_MENU_H
-void menu();
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "actions.h"
+
+void menu(int choix);
 #endif //MODULE4_MENU_H
