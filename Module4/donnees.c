@@ -6,43 +6,15 @@
 #include <stdlib.h>
 #include "donnees.h"
 
-typedef struct donnees Donnees;
-    struct donnees{
-        int *milli;
-        int *pouls;
-    };
-void lectureCSV(int *counter){
-    counter = 0;
-    Donnees milli;
-    Donnees pouls;
-                                                                        //compte le nb de ligne
-    int c;                                                             //sert à regarder chaque caracère du fichier
-    int nb_line = 0;
-    FILE *fp;                                               // j'ouvre le fichier que je désire en mode "r"
-    while ((c = getc(fp)) != EOF){
-        if (c == '\n')
-            ++nb_line==&counter;
-    }                                                                      //fin compte ligne
 
-    FILE* fichier = NULL;                                                 //charger info.csv
-
-    fichier = fopen("info.csv", "r");
-
+void ecritureCSV(FILE *fichier,unsigned int nb_line, Donnees *tab){                     //stock le fichier dans notre tableau de structcure
+    int i=0;
     if (fichier != NULL) {
-        while(nb_line!=0){
-            fscanf(fichier, "%d;%d ",&milli,&pouls);
-            --nb_line;
+        for(i=0;i!=nb_line; i++) {
+            fscanf(fichier, "%d;%d\n ", &tab[i].milli, &tab[i].pouls);
+        }
+    }
 }
 
-void insertion(){
 
-}
-
-void inverseInsertion(){        //ordre decroissant
-
-}
-
-void dichotomie(){
-
-}
 
