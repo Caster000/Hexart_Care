@@ -4,35 +4,43 @@
 
 #include "actions.h"
 
-donneesBrut(){
+void donneesBrut(){
 
 }
 
-ordreCroissant(){
+void ordreCroissantTemps(){
 
 }
 
-ordreDecroissant(){
+void ordreCroissantPouls(){
 
 }
 
-rechercheFrequence(){
+void ordreDecroissantTemps(){
 
 }
 
-moyenne(){
+void ordreDecroissantPouls(){
 
 }
 
-nombreLigne(){
+void rechercheFrequence(){
 
 }
 
-max(){
+void moyenne(){
 
 }
 
-mini(){
+void nombreLigne(){
+
+}
+
+void max(){
+
+}
+
+void mini(){
 
 }
 
