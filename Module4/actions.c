@@ -19,7 +19,29 @@ void donneesBrut( int nb_line, struct Donnees *tab){
 }
 
 void ordreCroissantTemps(){
+ int i,j;
+    int tmp=0;
+    for (i=0;i<4;i++)
+    {
+        for(j=i;j<4;j++)
+        {
+            if(t[j]<t[i])
+            {
+                tmp=t[i];
+                t[i]=t[j];
+                t[j]=tmp;
+            }
+        }
+    }
+    for(i=0;i<4;i++)
+    {
+        printf("%d \n",t[i]);
+    }
 
+    getch();
+
+    }
+}
 }
 
 void ordreCroissantPouls(){
