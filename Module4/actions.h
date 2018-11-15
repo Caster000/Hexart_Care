@@ -1,7 +1,3 @@
-//
-// Created by cheva on 13/11/2018.
-//
-
 #ifndef MODULE4_ACTIONS_H
 #define MODULE4_ACTIONS_H
 #include <stdio.h>
@@ -9,28 +5,26 @@
 #include <string.h>
 #include <stdbool.h>
 
+#define TEMPS 1000                      //utilisation pour moyenne()
+
 #include "donnees.h"
 
 void donneesBrut( int nb_line,struct Donnees *tab);
 
-ordreCroissantTemps();
+void ordreCroissantTemps(int nb_line, struct Donnees *tab);
 
-ordreCroissantPouls();
+void ordreCroissantPouls(int nb_line, struct Donnees *tab);
 
-ordreDecroissantTemps();
+void ordreDecroissantTemps(int nb_line, struct Donnees *tab);
 
-ordreDecroissantPouls();
+void ordreDecroissantPouls(int nb_line, struct Donnees *tab);
 
-rechercheFrequence();
+void rechercheFrequence(int nb_line, struct Donnees *tab, int frequence);
 
-moyenne();
+void moyenne(int nb_line, struct Donnees *tab,int borne1, int borne2);
 
-nombreLigne();
+void max(int nb_line, struct Donnees *tab);
 
-max();
-
-mini();
-
-
+void mini(int nb_line, struct Donnees *tab);
 
 #endif //MODULE4_ACTIONS_H
