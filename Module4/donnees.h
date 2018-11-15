@@ -8,10 +8,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct donnees Donnees;                 //definition de notre strucuture de donnees
-struct donnees{
+                //definition de notre strucuture de donnees
+struct Donnees{
     int milli;
     int pouls;
 };
-void ecritureCSV(FILE *fichier,unsigned int nb_line, Donnees *tab);
+void ecritureCSV(FILE *fichier, int nb_line, struct Donnees *tab);
 #endif
