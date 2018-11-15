@@ -1,12 +1,9 @@
-//
-// Created by cheva on 13/11/2018.
-//
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "donnees.h"
 
-
+//--------------------------------------------fonction d'ecriture du fichier dans structure-------------------------------------------------
 void ecritureCSV(FILE *fichier, int nb_line,struct Donnees *tab){                     //stock le fichier dans notre tableau de structcure
     int i=0;
     if (fichier != NULL) {
