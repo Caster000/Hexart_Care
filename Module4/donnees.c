@@ -7,7 +7,7 @@
 #include "donnees.h"
 
 
-void ecritureCSV(FILE *fichier,unsigned int nb_line, Donnees *tab){                     //stock le fichier dans notre tableau de structcure
+void ecritureCSV(FILE *fichier, int nb_line,struct Donnees *tab){                     //stock le fichier dans notre tableau de structcure
     int i=0;
     if (fichier != NULL) {
         for(i=0;i!=nb_line; i++) {
