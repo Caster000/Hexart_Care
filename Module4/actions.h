@@ -4,7 +4,14 @@
 
 #ifndef MODULE4_ACTIONS_H
 #define MODULE4_ACTIONS_H
-donneesBrut();
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
+#include "donnees.h"
+
+void donneesBrut( int nb_line,struct Donnees *tab);
 
 ordreCroissantTemps();
 
