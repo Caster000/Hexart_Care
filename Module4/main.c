@@ -6,9 +6,9 @@
 #include "actions.h"
 
 int main() {
-
-    unsigned  int nb_line;
-    Donnees *tab = NULL;                //creation de notre tableau de structure
+    int choix;
+      int nb_line;
+   struct Donnees *tab;                //creation de notre tableau de structure
 
     FILE* fichier = NULL;
 
@@ -30,9 +30,12 @@ int main() {
 
 
     //allocation du tableau de donnée avec une taille dynamique selon nb_line
-    if((tab = malloc(nb_line * sizeof(Donnees))) == NULL)
+    if((tab = malloc(nb_line * sizeof(struct Donnees))) == NULL)
     {
         printf("\n---Unable to allocate space for tableau_data.---\n");
         exit(-1);
     }
     ecritureCSV(fichier,nb_line, tab);
+    menu(choix, nb_line, tab);
+  return 0;
+}
