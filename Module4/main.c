@@ -17,12 +17,12 @@ int main() {
         exit(-1);
     }
 
-//--------------------------------------------------compte le nombre de ligne-------------------------------------------------------
+//--------------------------------------------------compte le nombre de lignes-------------------------------------------------------
   int c;                                                    //sert à regarder chaque caracère du fichier
   while ((c = fgetc(fichier)) != EOF){                      //EOF ---> End of File
       if (c == '\n')                                        // \n correspond a un char, donc à un entier.
           ++nb_line;
-  } //----------------------------------fin compte ligne--------------------------------------
+  } //----------------------------------fin compte lignes--------------------------------------
     rewind(fichier);                                        //remise du curseur au début
 
 
