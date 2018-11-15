@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1542275496 source:t:\codeblocks\workspace\projet_coeur\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1542275732 source:t:\codeblocks\workspace\projet_coeur\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	"generationCode.h"
+
+1542271461 t:\codeblocks\workspace\projet_coeur\generationcode.h
+
+1542276837 source:t:\codeblocks\workspace\projet_coeur\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"generationCode.h"
+
+1542277374 t:\codeblocks\workspace\projet_coeur\menu.h
+
+1542274818 t:\codeblocks\workspace\projet_coeur\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	"generationCode.h"
+
