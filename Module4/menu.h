@@ -9,5 +9,5 @@
 #include <stdlib.h>
 #include "actions.h"
 
-void menu(int choix);
+void menu(int choix,  int nb_line, Donnees *tab);
 #endif //MODULE4_MENU_H
