@@ -1,120 +1,194 @@
-//
-// Created by cheva on 13/11/2018.
-//
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "actions.h"
-#include "donnees.h"
 
-
-
-
+//---------------------------------afficher les donnees tel quel----------------------------------------------
 void donneesBrut( int nb_line, struct Donnees *tab){
      int i;
-    for (i=0;i<nb_line;i++){
-        printf("%d;%d", tab[i].milli, tab[i].pouls);
+    for (i=0;i<nb_line;i++){                                            //permet d'afficher tout le fichier
+        printf("%d;%d\n", tab[i].milli, tab[i].pouls);
     }
 
 }
+//---------------------------------afficher en ordre croissant selon temps----------------------------------------------
+void ordreCroissantTemps(int nb_line, struct Donnees *tab){
+    int i,j;
+    struct Donnees tmp,tmp1;
+    i=0;
+    j=0;
 
-void ordreCroissantTemps(){
- int i,j;
-    int tmp=0;
-    for (i=0;i<4;i++)
+    for (i=0;i<nb_line;i++)                                             //permet de lire tout le fichier
     {
-        for(j=i;j<4;j++)
+        for(j=i;j<nb_line;j++)                                          //tri à bulle
         {
-            if(t[j]<t[i])
+            if(tab[j].milli<tab[i].milli)                               //permet echanger les valeurs de 2 indices tab[].milli
             {
-                tmp=t[i];
-                t[i]=t[j];
-                t[j]=tmp;
+                tmp.milli=tab[i].milli;
+                tab[i].milli=tab[j].milli;
+                tab[j].milli=tmp.milli;
+
+                tmp1.pouls=tab[i].pouls;                               //permet echanger les valeurs de 2 indices tab[].poul
+                tab[i].pouls=tab[j].pouls;
+                tab[j].pouls=tmp1.pouls;
             }
         }
     }
-    for(i=0;i<4;i++)
+    for(i=0;i<nb_line;i++)
     {
-        printf("%d \n",t[i]);
-    }
-
-    getch();
-
+        printf("%d;%d \n",tab[i].milli, tab[i].pouls);
     }
 }
+//---------------------------------afficher en ordre croissant selon pouls----------------------------------------------
+void ordreCroissantPouls(int nb_line, struct Donnees *tab){
+    int i,j;
+    struct Donnees tmp,tmp1;
+    i=0;
+    j=0;
+
+    for (i=0;i<nb_line;i++)                                         //permet de lire tout le fichier
+    {
+        for(j=i;j<nb_line;j++)                                      //tri à bulle
+        {
+            if(tab[j].pouls<tab[i].pouls)
+            {
+                tmp.pouls=tab[i].pouls;                               //permet echanger les valeurs de 2 indices tab[].pouls
+                tab[i].pouls=tab[j].pouls;
+                tab[j].pouls=tmp.pouls;
+
+                tmp1.milli=tab[i].milli;                               //permet echanger les valeurs de 2 indices tab[].milli
+                tab[i].milli=tab[j].milli;
+                tab[j].milli=tmp1.milli;
+            }
+        }
+    }
+    for(i=0;i<nb_line;i++)
+    {
+        printf("%d;%d \n",tab[i].milli, tab[i].pouls);
+    }
 }
+//---------------------------------afficher en ordre decroissant selon temps----------------------------------------------
+void ordreDecroissantTemps(int nb_line, struct Donnees *tab){
+    int i,j;
+    struct Donnees tmp,tmp1;
+    i=0;
+    j=0;
 
-void ordreCroissantPouls(){
+    for (i=0;i<nb_line;i++)                                         //permet de lire tout le fichier
+    {
+        for(j=i;j<nb_line;j++)                                      //tri à bulle
+        {
+            if(tab[j].milli>tab[i].milli)
+            {
+                tmp.milli=tab[i].milli;                               //permet echanger les valeurs de 2 indices tab[].milli
+                tab[i].milli=tab[j].milli;
+                tab[j].milli=tmp.milli;
 
+                tmp1.pouls=tab[i].pouls;                               //permet echanger les valeurs de 2 indices tab[].pouls
+                tab[i].pouls=tab[j].pouls;
+                tab[j].pouls=tmp1.pouls;
+            }
+        }
+    }
+    for(i=0;i<nb_line;i++)                                         //permet d'afficher tout le fichier
+    {
+        printf("%d;%d \n",tab[i].milli, tab[i].pouls);
+    }
 }
+//---------------------------------afficher en ordre decroissant selon pouls----------------------------------------------
+void ordreDecroissantPouls(int nb_line, struct Donnees *tab){
 
-void ordreDecroissantTemps(){
+    int i,j;
+    struct Donnees tmp,tmp1;
+    i=0;
+    j=0;
 
+    for (i=0;i<nb_line;i++)                                         //permet de lire tout le fichier
+    {
+        for(j=i;j<nb_line;j++)                                      //tri à bulle
+        {
+            if(tab[j].pouls>tab[i].pouls)
+            {
+                tmp.pouls=tab[i].pouls;                               //permet echanger les valeurs de 2 indices tab[].pouls
+                tab[i].pouls=tab[j].pouls;
+                tab[j].pouls=tmp.pouls;
+
+                tmp1.milli=tab[i].milli;                               //permet echanger les valeurs de 2 indices tab[].milli
+                tab[i].milli=tab[j].milli;
+                tab[j].milli=tmp1.milli;
+            }
+        }
+    }
+    for(i=0;i<nb_line;i++)                                         //permet d'afficher tout le fichier
+    {
+        printf("%d;%d \n",tab[i].milli, tab[i].pouls);
+    }
 }
-
-void ordreDecroissantPouls(){
-
+//---------------------------------afficher frequence demandé----------------------------------------------
+void rechercheFrequence(int nb_line, struct Donnees *tab, int frequence){
+int i;
+    for(i=0;i<nb_line;i++){                                        //permet de lire tout le fichier
+        if(tab[i].pouls==frequence){
+            printf("%d;%d", tab[i].milli, tab[i].pouls);
+        }
+    }
 }
-
-void rechercheFrequence(){
-
-}
-
-void moyenne(){
-void Moyenne_pouls_plage_temps(int temps_a, int temps_b, int nombre_de_ligne, struct data *tableau_data)
-{
+//---------------------------------afficher moyenne entre deux bornes----------------------------------------------
+void moyenne(int nb_line, struct Donnees *tab, int borne1, int borne2){
     float total_pouls = 0;
     float nb_valeur = 0;
-    int temporraire_temps = 0;
-    int y = 0;
+    int temporaire = 0;
+    int i = 0;
 
-    for(temporraire_temps = temps_a; temporraire_temps < temps_b; temporraire_temps += PERIODE)
+    for(temporaire = borne1; temporaire <= borne2; temporaire += TEMPS)
     {
-        for(y=0; y < nombre_de_ligne; y++)
+        for(i=0; i<nb_line; i++)                                    //permet de lire tout le fichier
         {
-            if(tableau_data[y].millisecondes == temporraire_temps)
+            if(tab[i].milli == temporaire)
             {
-                total_pouls += tableau_data[y].pouls;
+                total_pouls += tab[i].pouls;                        //additionne valeurs entre les bornes
                 nb_valeur++;
             }
         }
     }
-    printf("\nLa moyenne de pouls sur l'interval %d ; %d est de %f", temps_a, temps_b, (total_pouls/nb_valeur));
+    printf("\nLa moyenne de pouls sur l'intervalle %d - %d est de %f", borne1, borne2, (total_pouls/nb_valeur));
 }
-
-
-}
-
-void nombreLigne(){
-
-}
-
-void max(){
-#include <stdio.h>
-
-void Afficher_min_max(unsigned int nombre_de_ligne,struct data *tableau_data)//uniquement si il y a un seul pouls min/max
-{
+//---------------------------------afficher pouls maximum----------------------------------------------
+void max(int nb_line, struct Donnees *tab){
     int id_min = 0;
     int id_max = 0;
 
-    unsigned int i = 0;
-    for(i=0; i < nombre_de_ligne; i++)
+    int i = 0;
+    for(i=0; i < nb_line; i++)                                         //permet de lire tout le fichier
     {
-if(tableau_data[id_min]).pouls > tableau_data[i].pouls)
+        if(tab[id_min].pouls > tab[i].pouls)                          //compare toutes les valeurs
         {
             id_min = i;
         }
-if(tableau_data[id_max].pouls < tableau_data[i].pouls)
+        if(tab[id_max].pouls < tab[i].pouls)
         {
             id_max = i;
         }
     }
+    printf("Le pouls maximum est %d\n",tab[id_max].pouls);
 }
+//---------------------------------afficher pouls minimum----------------------------------------------
+void mini(int nb_line, struct Donnees *tab){
+    int id_min = 0;
+    int id_max = 0;
 
-
-}
-
-void mini(){
-
+    int i = 0;
+    for(i=0; i < nb_line; i++)                                         //permet de lire tout le fichier
+    {
+        if(tab[id_min].pouls > tab[i].pouls)                          //compare toutes les valeurs
+        {
+            id_min = i;
+        }
+        if(tab[id_max].pouls < tab[i].pouls)
+        {
+            id_max = i;
+        }
+    }
+    printf("Le pouls minimum est %d\n",tab[id_min].pouls);
 }
 
